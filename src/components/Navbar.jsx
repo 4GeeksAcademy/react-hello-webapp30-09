@@ -1,19 +1,23 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
-
-	return (
-		<nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">React Boilerplate</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav>
-	);
+  return (
+    <nav className="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-warning">
+      <div className="container">
+        <Link to="/" className="navbar-brand">
+          <span className="text-warning fw-bold">STAR WARS</span> DATABANK
+        </Link>
+        
+        <div className="navbar-nav ms-auto">
+          <Link to="/" className="nav-link text-warning">
+            Home
+          </Link>
+          <Link to="/favorites" className="nav-link text-warning">
+            Favorites
+          </Link>
+        </div>
+      </div>
+    </nav>
+  );
 };
